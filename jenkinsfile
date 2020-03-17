@@ -1,0 +1,8 @@
+node{
+	stage('git"){
+	git 'https://github.com/rbclokesh/game-of-life.git'
+	} 
+	stage('mvn'){
+	sh label: '', script: 'mvn test'
+	}
+}
